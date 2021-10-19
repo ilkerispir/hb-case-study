@@ -1,2 +1,1 @@
-# hb-case-study
-HB Case Study
+# HB Case Study
