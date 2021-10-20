@@ -25,3 +25,6 @@
     * Add TRACING HEADER if missing in incoming requests
     * Upload TRACEs to a certain location for requests coming to the server
         * Request In TRACE ID, start, end(Response)
+
+## [Architecture](https://www.envoyproxy.io/)
+![Architecture](images/architecture.png)
