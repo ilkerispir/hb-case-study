@@ -28,3 +28,9 @@
 
 ## [Architecture](https://www.envoyproxy.io/)
 ![Architecture](static/images/architecture.png)
+
+## Docker Remove All Containers & Images
+```
+docker rm -vf $(docker ps -a -q)
+docker rmi -f $(docker images -a -q)
+```
