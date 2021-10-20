@@ -1,6 +1,6 @@
 # HB Case Study
 
-![Envoy Logo](images/envoy-logo.svg)
+![Envoy Logo](static/images/envoy-logo.svg)
 ## [Envoy Proxy](https://www.envoyproxy.io/)
 - It is a modern Layer7(App) and Layer3(TCP) proxy
 - Incredibly modernized version of reverse proxies like NGINX, HAProxy
@@ -27,4 +27,4 @@
         * Request In TRACE ID, start, end(Response)
 
 ## [Architecture](https://www.envoyproxy.io/)
-![Architecture](images/architecture.png)
+![Architecture](static/images/architecture.png)
