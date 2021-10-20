@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, url_for, redirect
 from time import gmtime, strftime
+import socket
 
 app = Flask(__name__)
 
@@ -7,12 +8,13 @@ app = Flask(__name__)
 def favicon():
     return redirect(url_for('static', filename='images/favicon.ico'))
 
-@app.route("/")
-def index():
+@app.route("/service/<service_number>")
+def index(service_number):
     return jsonify({
         "success": True,
-        "message": "hello world",
-        "time": strftime("%Y-%m-%d %H:%M:%S", gmtime())
+        "time": strftime("%Y-%m-%d %H:%M:%S", gmtime()),
+        "hostname": socket.gethostname(),
+        "ip": socket.gethostbyname(socket.gethostname())
     })
 
 if __name__ == "__main__":

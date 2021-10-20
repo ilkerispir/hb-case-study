@@ -29,7 +29,13 @@
 ## [Architecture](https://www.envoyproxy.io/)
 ![Architecture](static/images/architecture.png)
 
-## Docker Remove All Containers & Images
+## Start all of our containers
+```
+docker-compose build --pull
+docker-compose up -d
+```
+
+## Remove all containers & images
 ```
 docker rm -vf $(docker ps -a -q)
 docker rmi -f $(docker images -a -q)
