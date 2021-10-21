@@ -26,12 +26,31 @@
     * Upload TRACEs to a certain location for requests coming to the server
         * Request In TRACE ID, start, end(Response)
 
+#
+
 ## [Architecture](https://www.envoyproxy.io/)
 ![Architecture](static/images/architecture.png)
+
+#
+
+## API Reference
+#### Get service
+
+```http
+  GET /service/${id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+#
 
 ![Jenkins](static/images/jenkins.png)
 ### [CI/CD - Jenkins](https://www.envoyproxy.io/)
 - The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+
+#
 
 ## Start all of our containers
 ```
@@ -44,3 +63,8 @@ docker-compose up -d
 docker rm -vf $(docker ps -a -q)
 docker rmi -f $(docker images -a -q)
 ```
+
+# 
+
+## References
+* Drawing for flowchart: https://sketch.io/sketchpad/
