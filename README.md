@@ -84,4 +84,5 @@ docker rmi -f $(docker images -a -q)
 
 ## References
 * Drawing for flowchart: https://sketch.io/sketchpad/
-* Jenkins Installation: https://www.jenkins.io/doc/book/installing/linux/
+* Jenkins installation: https://www.jenkins.io/doc/book/installing/linux/
+* Ahmetb broadcast: https://www.youtube.com/watch?v=Uiv5m20lYaE
