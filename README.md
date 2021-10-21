@@ -49,7 +49,7 @@
 ![Jenkins](static/images/jenkins.png)
 ### [CI/CD - Jenkins](https://www.envoyproxy.io/)
 
-- Endpoint: http://hb.ilkerispir.com:8080/
+- Endpoint:
 - The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
 
 
