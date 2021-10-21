@@ -48,7 +48,23 @@
 
 ![Jenkins](static/images/jenkins.png)
 ### [CI/CD - Jenkins](https://www.envoyproxy.io/)
+
+- Endpoint: http://hb.ilkerispir.com:8080/
 - The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+
+
+### Install commands
+```
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | 
+  sudo apt-key add -
+
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+/etc/apt/sources.list.d/jenkins.list'
+
+sudo apt-get update
+
+sudo apt-get install jenkins
+```
 
 #
 
@@ -68,3 +84,4 @@ docker rmi -f $(docker images -a -q)
 
 ## References
 * Drawing for flowchart: https://sketch.io/sketchpad/
+* Jenkins Installation: https://www.jenkins.io/doc/book/installing/linux/
