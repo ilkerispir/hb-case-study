@@ -7,7 +7,7 @@ services:
     networks:
     - envoymesh
     ports:
-    - "8080:8080"
+    - "80:80"
     - "8443:8443"
     - "8001:8001"
 
