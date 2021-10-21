@@ -29,6 +29,10 @@
 ## [Architecture](https://www.envoyproxy.io/)
 ![Architecture](static/images/architecture.png)
 
+![Jenkins](static/images/jenkins.png)
+### [CI/CD - Jenkins](https://www.envoyproxy.io/)
+- The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+
 ## Start all of our containers
 ```
 docker-compose build --pull
@@ -40,8 +44,3 @@ docker-compose up -d
 docker rm -vf $(docker ps -a -q)
 docker rmi -f $(docker images -a -q)
 ```
-
-![Jenkins](static/images/jenkins.png)
-
-### [CI/CD - Jenkins](https://www.envoyproxy.io/)
-- The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.

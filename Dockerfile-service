@@ -4,11 +4,7 @@ RUN apk update && apk add py3-pip bash curl
 
 WORKDIR /
 
-COPY main.py ./
-
-COPY requirements.txt ./
-
-COPY ./start_service.sh ./
+COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
