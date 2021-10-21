@@ -40,3 +40,8 @@ docker-compose up -d
 docker rm -vf $(docker ps -a -q)
 docker rmi -f $(docker images -a -q)
 ```
+
+![Jenkins](static/images/jenkins.png)
+
+### [CI/CD - Jenkins](https://www.envoyproxy.io/)
+- The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
