@@ -12,6 +12,7 @@ def favicon():
 def service(service_number):
     return jsonify({
         "success": True,
+        "serviceid": service_number,
         "time": strftime("%Y-%m-%d %H:%M:%S", gmtime()),
         "hostname": socket.gethostname(),
         "ip": socket.gethostbyname(socket.gethostname())

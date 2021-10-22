@@ -21,6 +21,16 @@ services:
     - envoymesh
     environment:
     - SERVICE_NAME=1
+  service2:
+    build:
+      context: .
+      dockerfile: Dockerfile-service
+    volumes:
+    - ./service-envoy.yaml:/etc/service-envoy.yaml
+    networks:
+    - envoymesh
+    environment:
+    - SERVICE_NAME=2
 
 networks:
   envoymesh: {}

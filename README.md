@@ -70,9 +70,12 @@ sudo apt-get install jenkins
 
 ## Start all of our containers
 ```
+cd /root/workspace/hb-case-study
+git pull
 docker-compose build --pull
 docker-compose up -d
 docker-compose scale service1=3
+docker-compose scale service2=3
 ```
 
 ## Remove all containers & images
