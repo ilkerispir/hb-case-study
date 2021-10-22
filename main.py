@@ -9,7 +9,7 @@ def favicon():
     return redirect(url_for('static', filename='images/favicon.ico'))
 
 @app.route("/service/<service_number>")
-def index(service_number):
+def service(service_number):
     return jsonify({
         "success": True,
         "time": strftime("%Y-%m-%d %H:%M:%S", gmtime()),
