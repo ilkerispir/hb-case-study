@@ -72,6 +72,7 @@ sudo apt-get install jenkins
 ```
 docker-compose build --pull
 docker-compose up -d
+docker-compose scale service1=3
 ```
 
 ## Remove all containers & images
@@ -80,9 +81,12 @@ docker rm -vf $(docker ps -a -q)
 docker rmi -f $(docker images -a -q)
 ```
 
-# 
+#
 
 ## References
+* Envoy: https://www.envoyproxy.io/
+* Envoy GitHub: https://github.com/envoyproxy/envoy
+* Envoy control plane: https://static.sched.com/hosted_files/kccncna20/03/BuildingAnEnvoyControlPlane.pdf
 * Drawing for flowchart: https://sketch.io/sketchpad/
 * Jenkins installation: https://www.jenkins.io/doc/book/installing/linux/
 * Ahmetb broadcast: https://www.youtube.com/watch?v=Uiv5m20lYaE
