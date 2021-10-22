@@ -44,27 +44,51 @@
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
+#### Example Response
+
+```
+{
+  "hostname": "fc4a73df5ae8",
+  "ip": "172.20.0.5",
+  "serviceid": "1",
+  "success": true,
+  "time": "2021-10-22 18:05:12"
+}
+```
 #
 
 ![Jenkins](static/images/jenkins.png)
 ### [CI/CD - Jenkins](https://www.envoyproxy.io/)
 
-- Endpoint:
-- The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
 
+### GitHub Webhook
+![Jenkins](static/images/github-webhook.png)
 
-### Install commands
+Jenkins trigger pipeline(Jenkinsfile):
 ```
-wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | 
-  sudo apt-key add -
-
-sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
-/etc/apt/sources.list.d/jenkins.list'
-
-sudo apt-get update
-
-sudo apt-get install jenkins
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                sh "docker-compose build --pull"
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh "docker-compose up -d"
+                sh "docker-compose scale service1=3 service2=3"
+            }
+        }
+    }
+}
 ```
+### Pipeline Dashboard
+![Jenkins](static/images/pipeline-dashboard.png)
+
+### Console Output 
+![Jenkins](static/images/console-output.png)
 
 #
 
@@ -90,3 +114,14 @@ docker rmi -f $(docker images -a -q)
 * Drawing for flowchart: https://sketch.io/sketchpad/
 * Jenkins installation: https://www.jenkins.io/doc/book/installing/linux/
 * Ahmetb broadcast: https://www.youtube.com/watch?v=Uiv5m20lYaE
+
+#
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ilkerispir.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ilkerispir/)
+
+#
+
+## Author
+- [@ilkerispir](https://www.github.com/ilkerispir)
